@@ -8,6 +8,8 @@ router.get('/', skillController.index)
 
 router.get('/:id', skillController.show)
 
+router.get('/skills', skillController.create)
+
 
 module.exports = router
 

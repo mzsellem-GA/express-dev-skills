@@ -4,7 +4,6 @@ const skills = [
 	{ id: 139608, skill: 'Express', done: false },
 ]
 
-
 function getAll() {
     return skills
 }

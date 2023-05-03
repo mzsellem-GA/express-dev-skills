@@ -12,7 +12,13 @@ function show(req, res) {
     })
 }
 
+function create(req, res) {
+    Skill.create(req.body)
+    res.redirect('/skills')
+}
+
 module.exports = {
     index,
-    show
+    show,
+    create
 }
