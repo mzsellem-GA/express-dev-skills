@@ -12,9 +12,9 @@ router.get('/:id', skillController.show)
 
 
 
-router.post('/skills', skillController.create)
+router.post('/', skillController.create) //WHY DOES THIS HAVE TO BE AT THE ROOT??? and not /skills
 
-router.put('/:id/edit', skillController.updateOne)
+router.put('/:id', skillController.updateOne)
 
 
 module.exports = router
