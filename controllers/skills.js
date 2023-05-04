@@ -21,9 +21,15 @@ function newSkill(req, res) {
     res.render('skills/new', { title: 'New Skill' })
 }
 
+function updateOne(req, res) {
+    Skill.updateSkills(req.params.id, req.body)
+    res.redirect('/skills')
+}
+
 module.exports = {
     index,
     show,
     create, 
-    newSkill
+    newSkill, 
+    updateOne
 }

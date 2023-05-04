@@ -13,14 +13,22 @@ function getOne(id) {
     return skills.find(skill => skill.id === id)
 }
 
-function create(todo) {
+function create(skill) {
     // todo.id = Date.now() % 1000000
     // todo.done = false
-    todos.push(todo)
+    skills.push(skill)
+}
+
+function updateSkills(id, skill) {
+    id = parseInt(id)
+    const idx = skills.findIndex(skill => skill.id === id)
+    skills[idx] = skill
+    skill.id = id
 }
 
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    updateSkills
 }

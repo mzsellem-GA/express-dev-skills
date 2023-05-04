@@ -10,7 +10,11 @@ router.get('/new', skillController.newSkill)
 
 router.get('/:id', skillController.show)
 
-router.get('/skills', skillController.create)
+
+
+router.post('/skills', skillController.create)
+
+router.put('/:id/edit', skillController.updateOne)
 
 
 module.exports = router
