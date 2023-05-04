@@ -14,8 +14,8 @@ function getOne(id) {
 }
 
 function create(skill) {
-    // todo.id = Date.now() % 1000000
-    // todo.done = false
+    skill.id = Date.now() % 1000000
+    skill.done = false
     skills.push(skill)
 }
 
