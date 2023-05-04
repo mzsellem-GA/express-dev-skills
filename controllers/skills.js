@@ -26,10 +26,16 @@ function updateOne(req, res) {
     res.redirect('/skills')
 }
 
+function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.id) 
+    res.redirect('/skills')
+}
+
 module.exports = {
     index,
     show,
     create, 
     newSkill, 
-    updateOne
+    updateOne,
+    deleteSkill
 }
