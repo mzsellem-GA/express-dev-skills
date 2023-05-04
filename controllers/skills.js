@@ -17,7 +17,7 @@ function create(req, res) {
     res.redirect('/skills')
 }
 
-function newToDo(req, res) {
+function newSkill(req, res) {
     res.render('skills/new', { title: 'New Skill' })
 }
 
@@ -25,5 +25,5 @@ module.exports = {
     index,
     show,
     create, 
-    newToDo
+    newSkill
 }

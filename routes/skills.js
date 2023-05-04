@@ -6,7 +6,7 @@ const skillController = require('../controllers/skills')
 
 router.get('/', skillController.index)
 
-router.get('/new', skillController.newToDo)
+router.get('/new', skillController.newSkill)
 
 router.get('/:id', skillController.show)
 
