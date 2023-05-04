@@ -17,8 +17,13 @@ function create(req, res) {
     res.redirect('/skills')
 }
 
+function newToDo(req, res) {
+    res.render('skills/new', { title: 'New Skill' })
+}
+
 module.exports = {
     index,
     show,
-    create
+    create, 
+    newToDo
 }
