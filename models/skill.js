@@ -13,7 +13,14 @@ function getOne(id) {
     return skills.find(skill => skill.id === id)
 }
 
+function create(todo) {
+    // todo.id = Date.now() % 1000000
+    // todo.done = false
+    todos.push(todo)
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 }
