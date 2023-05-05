@@ -19,16 +19,8 @@ function create(skill) {
     skills.push(skill)
 }
 
-function updateSkills(id, skill) {
-    id = parseInt(id)
-    const idx = skills.findIndex(skill => skill.id === id)
-    skills[idx] = skill
-    skill.id = id
-}
-
 function deleteOne(id) {
     id = parseInt(id)
-
     const idx = skills.findIndex(skill => skill.id === id) //finds the index of the id
     skills.splice(idx, 1)
 }
@@ -37,6 +29,5 @@ module.exports = {
     getAll,
     getOne,
     create,
-    updateSkills,
     deleteOne
 }

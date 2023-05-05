@@ -12,17 +12,12 @@ function show(req, res) {
     })
 }
 
-function create(req, res) {
-    Skill.create(req.body)
-    res.redirect('/skills')
-}
-
 function newSkill(req, res) {
     res.render('skills/new', { title: 'New Skill' })
 }
 
-function updateOne(req, res) {
-    Skill.updateSkills(req.params.id, req.body)
+function create(req, res) {
+    Skill.create(req.body)
     res.redirect('/skills')
 }
 
@@ -36,6 +31,5 @@ module.exports = {
     show,
     create, 
     newSkill, 
-    updateOne,
     deleteSkill
 }
