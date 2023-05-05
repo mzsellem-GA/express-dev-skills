@@ -1,18 +1,15 @@
 <%- include('../partials/header') %> 
     <h1>Programming 101</h1>
-    <h2>Skills</h2>
+    <h2>Required Skills</h2>
+    <a href="/skills/new">Add a Skill</a>
     <ul>
         <% skills.forEach(function(s) { %>
             <li>
                 <a href="/skills/<%= s.id %>">
                     <%= s.skill %>
                 </a>
-                <%= s.skill %>
-                    -
-                    <%= s.done ? 'done' : 'not done' %>
             </li>
             <% }); %>
     </ul>
-    <a href="/skills/new">Add a Skill</a>
 <%- include('../partials/footer') %> 
     
